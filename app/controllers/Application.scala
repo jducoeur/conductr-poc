@@ -5,8 +5,8 @@ import play.api.mvc._
 
 object Application extends Controller {
 
-  def index = Action {
-    Ok(views.html.index("Your new application is ready."))
+  def index(name:String) = Action {
+    Ok(views.html.index(s"You specified the name $name"))
   }
 
 }
