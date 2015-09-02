@@ -15,6 +15,3 @@ libraryDependencies ++= Seq(
   "com.typesafe.akka" %% "akka-contrib" % akkaV,
   "com.typesafe.akka" %% "akka-cluster" % akkaV
 )
-
-
-fork in run := true
