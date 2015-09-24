@@ -20,7 +20,7 @@ class ShardedActor extends Actor {
   
   def clusterAddress:String = {
     val cluster = Cluster.get(context.system)
-    cluster.selfAddress.toString
+    cluster.selfUniqueAddress.toString
   }
 }
 
