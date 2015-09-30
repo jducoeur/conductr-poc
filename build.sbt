@@ -23,3 +23,4 @@ BundleKeys.nrOfCpus := 1.0
 BundleKeys.memory := 64.MiB
 BundleKeys.diskSpace := 5.MB
 BundleKeys.startCommand += "-Dhttp.address=$WEB_BIND_IP -Dhttp.port=$WEB_BIND_PORT"
+BundleKeys.endpoints := Map("akka-remote" -> Endpoint("tcp"))
