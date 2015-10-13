@@ -26,5 +26,5 @@ BundleKeys.startCommand += "-Dhttp.address=$WEB_BIND_IP -Dhttp.port=$WEB_BIND_PO
 BundleKeys.system := "play-scala-poc"
 BundleKeys.endpoints := Map(
   "akka-remote" -> Endpoint("tcp"),
-  "web" -> Endpoint("http", services = Set(URI))
+  "web" -> Endpoint("http", services = Set(URI("http://:9000")))
 )
