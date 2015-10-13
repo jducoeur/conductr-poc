@@ -23,4 +23,8 @@ BundleKeys.nrOfCpus := 1.0
 BundleKeys.memory := 64.MiB
 BundleKeys.diskSpace := 5.MB
 BundleKeys.startCommand += "-Dhttp.address=$WEB_BIND_IP -Dhttp.port=$WEB_BIND_PORT"
-BundleKeys.endpoints := Map("akka-remote" -> Endpoint("tcp"))
+BundleKeys.system := "play-scala-poc"
+BundleKeys.endpoints := Map(
+  "akka-remote" -> Endpoint("tcp"),
+  "web" -> Endpoint("http", services = Set(URI))
+)
