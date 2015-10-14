@@ -18,7 +18,7 @@ import clustertest._
 object Global extends GlobalSettings {
   override def onStart(app: Application) {
     val config = AkkaEnv.asConfig
-    val systemName = sys.env.getOrElse("play-scala-poc", "MyApp1")
+    val systemName = sys.env.getOrElse("BUNDLE_SYSTEM", "MyApp1")
     val appSystem = ActorSystem(systemName, config.withFallback(ConfigFactory.load()))
     
     ActorManager.setupSharding(appSystem)
